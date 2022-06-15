@@ -1,0 +1,48 @@
+Around Web Features(functions):
+   1. login<-> persistent login
+   2. logout
+   3. register
+   4. display posts: images / videos
+   5. search by all/ keyword / user
+   6. create a new post: image/ video
+
+pages:
+  1.Login
+  2.Register
+  3.Home
+  //? how to navigate?
+
+
+UI Components:
+  1.header(top bar)
+  2.login
+  3.register
+  4.home
+    4.2 search
+    4.3 display(list)
+    4.4 upload component
+
+
+Data communication
+                APP
+
+   TopBar                  Main cbfn
+
+                     login    register  home
+                 cbfn -> isLoggedIn          |
+                            |          SearchBar                     posts
+                        server(token)      |                          |
+                                   SearchContext  SearchType   pictures  videos
+
+
+Router Design
+       /         Longin
+       /longin   Login
+       /register Register
+       /home     Home
+
+Navigating pages(components) using react-router
+     <Link> 用在组件的return里
+     history 用在代码当中
+     <Redirect>
+
